@@ -2,10 +2,10 @@
 
 /*********************************************************************************************
  *                                                                                           *
- * Plese read the following tutorial before implementing tasks:                              *
+ * Please read the following tutorial before implementing tasks:                              *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array    *
  *                                                                                           *
- * NOTE : Please do not use loops! All tasks can be implmeneted using standard Array methods *
+ * NOTE : Please do not use loops! All tasks can be implemented using standard Array methods *
  *                                                                                           *
  *********************************************************************************************/
 
@@ -23,7 +23,7 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+   return arr.indexOf(value);
 }
 
 /**
@@ -38,7 +38,12 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   throw new Error('Not implemented');
+   let arrayOfOdds = [];
+
+   for (let i = 0; i<len; i++) {
+      arrayOfOdds.push(i*2+1);
+    }
+   return arrayOfOdds
 }
 
 
@@ -54,7 +59,8 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
-   throw new Error('Not implemented');
+   let newArr = arr.concat(arr);
+   return newArr;
 }
 
 
@@ -70,7 +76,8 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+    let onlyPositives = arr.filter(item => item > 0);
+    return onlyPositives;
 }
 
 /**
