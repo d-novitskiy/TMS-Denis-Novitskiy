@@ -38,12 +38,10 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   let arrayOfOdds = [];
-
-   for (let i = 0; i<len; i++) {
-      arrayOfOdds.push(i*2+1);
-    }
-   return arrayOfOdds
+    return new Array(len).fill(0).reduce(function(onlyOdds , _){
+        onlyOdds.push(2 * onlyOdds.length + 1);
+        return onlyOdds;
+    }, []);
 }
 
 
